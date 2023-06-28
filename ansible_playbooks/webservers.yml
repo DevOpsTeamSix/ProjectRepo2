@@ -1,0 +1,14 @@
+- name: Web Servers Ansible Playbook
+  hosts: webservers
+- hosts: webservers
+  remote_user: ubuntu
+  become: yes
+  become_user: root
+  gather_facts: yes
+  pre_tasks:
+    - name: "install python"
+      raw: "sudo apt install python3 -y"
+    - name: "install apache"
+      raw: "sudo apt install apache2 -y"
+    - name: "start web service"
+      raw: "sudo service apache2 start"
