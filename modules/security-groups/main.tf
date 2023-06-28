@@ -7,7 +7,7 @@ ingress {
     from_port = 22
     to_port = 22
     protocol = "tcp"
-    cidr_blocks = ["172.31.2.192/32"]
+    cidr_blocks = ["72.83.238.40/32"]
 }
 
 ingress {
